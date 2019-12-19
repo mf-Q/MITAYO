@@ -40,7 +40,7 @@ Things you may want to cover:
 |name|string|null: false,unique: true  |
 |email|string|null: false,unique: true  |
 |pass |string|null: false     |
-|avater |string||
+
 
 ### Association
 - has_many:products
@@ -50,10 +50,11 @@ Things you may want to cover:
 |--------|------|-------------|
 |title|string|null: false,unique: true  |
 |genre |string|null: false |
-|timing |datetime||
+|timing |date||
 |place |string|null: false |
 |number |integer|default:1|
 |content|text|  |
+|user_id|integer|null: false |
 
 ### Association
 - belongs_to:user
