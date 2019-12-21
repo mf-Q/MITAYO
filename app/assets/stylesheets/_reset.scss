@@ -10,7 +10,7 @@
 */
 html{
 	color:#333;
-  background:#FFF;
+  background:#fffaf0;
   margin: 0 auto;
   padding:0;
 }
@@ -80,7 +80,13 @@ ul {
 	list-style:none;
 }
 
-a {
+a:link {
+  color: #333;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #333;
   text-decoration: none;
 }
 
