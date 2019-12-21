@@ -7,20 +7,24 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   </head>
 
   <body>
+  <header>
+    <h1 class="header__title"><a href="/">MITAYO</a></h1>
     <% if user_signed_in? %>
-        <div class="##">
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-          <a class="##" href="###">投稿する</a>
+        <div class="loginout_area">
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'loginout_area__button' %>
+          <%= link_to "投稿", new_product_path, class: "loginout_area__button" %>
         </div>
       <% else %>
-        <div class="##">
-          <%= link_to "ログイン", new_user_session_path, class: '##' %>
-          <%= link_to "新規登録", new_user_registration_path, class: '##' %>
+        <div class="loginout_area">
+          <%= link_to "ログイン", new_user_session_path, class: 'loginout_area__button' %>
+          <%= link_to "新規登録", new_user_registration_path, class: 'loginout_area__button' %>
         </div>
       <% end %>
+  </header>
     <%= yield %>
   </body>
 </html>

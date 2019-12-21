@@ -1,0 +1,99 @@
+.registration_area{
+  margin:100px auto;
+  
+  
+  &__formbox{
+    margin: 0 auto;
+    width: 30em;
+    height: auto;
+    border: 0.1em solid $main_color;
+  }
+
+  h2{
+    background-color: $main_color;
+    color:#fff;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 5px 0;
+    text-align: center;
+  }
+
+  .field_box{
+    margin: 20px auto;
+    width: 70%;
+    
+  
+
+    .field{
+      padding: 8px 0;
+
+      label {
+        font-size: 1em;
+        color:$button_link;
+      }
+      em{
+        font-size: 0.8em;
+        color:$button_link;
+
+      }
+      .inputarea{
+        margin-top: 5px;
+        width: 100%;
+        height: 2em;
+        padding: 3px 7px;
+      }
+      .inputarea:focus{
+        border:solid 1px $main_color;
+        outline: 0;
+      }
+      
+    }
+  
+  .submit_btn {
+    margin: 20px auto 30px;
+    width: 100%;
+    height: 40px;
+    color:#fff;
+    background-color:$main_color;
+    border:solid 0px $main_color;
+  }
+  .submit_btn:focus{
+    border:solid 0 $button_link;
+    background-color:$button_link;
+    transition: background-color 0.5s;
+    box-shadow: 0 8px 12px rgba(0,0,0,.15);
+    outline: 0;
+  }
+
+    
+    .render_btn {
+      width: 100%;
+      padding: 12px;
+      background-color:$main_color;
+      color: #fff;  
+    
+      &:hover{
+        background-color:$button_link;
+        transition: 1s;
+      }
+    }
+
+    .share_em {
+      font-size: 0.8em;
+      color:$button_link;
+    }
+  }
+
+  .forgot_pass{
+    color:$button_link;
+  
+    &:hover{
+      text-decoration: underline;
+      transition: 1s;
+    }
+  
+  }
+
+}
+
+
