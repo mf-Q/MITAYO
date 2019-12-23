@@ -1,24 +1,69 @@
-<%# <div class="modal-dialog">
-  <div class="modal-content"> %>
-  
-  <%= form_with(model: @product, local: true) do |form| %>
-      <% if product.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
-          <ul>
-          <% @product.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-          <% end %>
-          </ul>
+<%= form_with(model: @product, local: true) do |f| %>
+
+  <div class="product_formarea">
+    <h2>鑑賞作品を登録</h2>
+      <p class="explain">＼ 観た映画、ドラマ、劇、読んだ本などを記録しよう！／</p>
+
+      <div class="product_form">
+
+        <div class="input_section">
+          <div class="input_section__left">
+          <%= f.label :title, "タイトル" %>
+          </div>
+          <div class="input_section__right">
+          <%= f.text_field :title, placeholder: '作品のタイトルを入れよう! ※必須', class: "input_box" %>
+          </div>
         </div>
-      <% end %>
 
-      <%= form.label :name %>
-      <%= form.text_field :name %>
+        <div class="selectwrap">
+          <div class="input_section__left">
+          <%= f.label :genre, "ジャンル" %>
+          </div>
+          <div class="input_section__right">
+          <%= f.select :genre, [['映画', '映画'], ['ドラマ', 'ドラマ'], ['本', '本'], ['マンガ', 'マンガ'], ['演劇', '演劇'], ['その他', 'その他']], { include_blank: "--必須--" }, {class: "input_box"}%>
+          </div>
+        </div>
 
-      <div class="actions">
-        <%= form.submit %>
+        <div class="date_section">
+          <div class="input_section__left">
+          <%= f.label :timing, "鑑 賞 日" %>
+          </div>
+          <div class="input_section__right">
+          <%= f.date_select :timing, {start_year: 1900, prompt: {year: "年", month: "月", day: "日"}}, class: "input_box" %>
+          </div>
+        </div>
+
+        <div class="selectwrap">
+          <div class="input_section__left">
+          <%= f.label :place, "場　所" %>
+          </div>
+          <div class="input_section__right">
+          <%= f.select :place,  [['映画館', '映画館'], ['劇場', '劇場'], ['家', '家'], ['その他', 'その他']], { include_blank: "--必須--" }, {class: "input_box"}%>
+          </div>
+        </div>
+
+        <div class="input_section">
+          <div class="input_section__left">
+          <%= f.label :number, "見た回数" %>
+          </div>
+          <div class="input_section__right">
+          <%= f.number_field :number, placeholder: '何回見た？', value:1, class: "input_box" %>
+          </div>
+        </div>
+
+        <div class="input_section">
+          <div class="input_section__left">
+          <%= f.label :content, "コメント" %>
+          </div>
+          <div class="input_section__right">
+          <%= f.text_area :content, placeholder: '感想などあればここに', class: "input_textbox" %>
+          </div>
+        </div>
+      
+        <div class="actions">
+            <%= f.submit "MITAYO!", class: 'mitayo_btn' %>
+        </div>
+
       </div>
-    <% end %>
-  <%# </div>
-</div> %>
+  </div>
+<% end %>

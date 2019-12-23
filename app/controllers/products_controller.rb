@@ -3,16 +3,14 @@ class ProductsController < ApplicationController
   def index
   end
 
-  def show
-  end
-
   def new
     
   end
 
   def create
-    @product = Product.new(product_params)
+    Product.create(product_params)
   end
+
 
 
   private
