@@ -16,8 +16,12 @@ class ProductsController < ApplicationController
                            content: product_params[:content],
                            user_id: current_user.id
                           )
-    @product.save
-    redirect_to("/")
+    if @product.save
+    redirect_to root_path, notice: '1 MITAYO 追加！'
+    else
+      flash.now[:alert] = '追加に失敗したよ'
+      render :new
+    end
   end
   
 
