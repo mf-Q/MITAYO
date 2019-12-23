@@ -13,8 +13,10 @@
   <body>
   <header>
     <h1 class="header__title"><a href="/">MITAYO</a></h1>
+    
     <% if user_signed_in? %>
-        <div class="loginout_area">
+          <div class="loginout_area">
+
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'loginout_area__button' %>
           <%= link_to "投稿", new_product_path, class: "loginout_area__button" %>
         </div>

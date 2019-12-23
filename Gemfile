@@ -79,3 +79,5 @@ gem 'ransack'
 # ImageMagickをrailsで使えるようにするgem落とす ← 先に brew install imagemagick
 gem 'mini_magick'
 gem 'carrierwave'
+
+gem 'bootstrap-sass'
