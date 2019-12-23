@@ -1,4 +1,4 @@
-<%= form_with(model: @product, local: true) do |f| %>
+<%= form_with model: @product, local: true do |f| %>
 
   <div class="product_formarea">
     <h2>鑑賞作品を登録</h2>
@@ -61,7 +61,7 @@
         </div>
       
         <div class="actions">
-            <%= f.submit "MITAYO!", class: 'mitayo_btn' %>
+            <%= f.submit "MITAYO!", type: "submit", class: 'mitayo_btn' %>
         </div>
 
       </div>
