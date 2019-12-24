@@ -1,0 +1,75 @@
+ <body>
+  <div class="container">
+    <section>
+
+        <div class="product_showarea">
+          <h2>「<%= @product.title %>」の詳細</h2>
+
+          <div class="show_box">
+          
+            <div class="show_box__half">
+                <div class="show_box__half__left">
+                  <%= label :timing, "観た日" %>
+                </div>
+                <div class="show_box__half__right">
+                  <div class="info-text">
+                  <%= l @product.timing, format: :long %>
+                  </div>
+                </div>
+            </div>
+
+            
+            <div class="show_box__half">
+                <div class="show_box__half__left">
+                  <%= label :genre, "ジャンル" %>
+                </div>
+                <div class="show_box__half__right">
+                  <div class="info-text">
+                  <%= @product.genre %>
+                  </div>
+                </div>
+            </div>
+
+          </div>  
+
+          <div class="show_box">
+
+            <div class="show_box__half">
+                <div class="show_box__half__left">
+                  <%= label :place, "観た場所" %>
+                </div>
+                <div class="show_box__half__right">
+                  <div class="info-text">
+                  <%= @product.place %>
+                  </div>
+                </div>
+            </div>
+
+            <div class="show_box__half">
+                <div class="show_box__half__left">
+                  <%= label :number, "回数" %>
+                </div>
+                <div class="show_box__half__right">
+                  <div class="info-text">
+                  <%= @product.number %>
+                  </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="comment_area">
+            <p class="comment_area-text">コメント</p>
+            <div class="comment_area__view">
+              <p class="comment_area__view-text">
+                <%= @product.content %>
+              </p>
+            </div>
+          </div>
+
+
+        </div>
+
+    </section>
+  </div>
+</body>
+</html>
