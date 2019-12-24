@@ -1,0 +1,93 @@
+.product_showarea {
+  margin:50px auto;
+  width: 30em;
+  height: auto;
+  
+
+    h2{
+      background-color: $main_color;
+      color:#fff;
+      font-size: 1.1em;
+      font-weight: bold;
+      padding: 5px 10px;
+      text-align: center;
+      border-radius: 5px;
+      }
+  
+  .show_box {
+    margin: 30px auto 5px;
+    width: 100%;
+    display: flex;
+    
+      &__half{
+        width: 50%;
+        display: flex;
+        
+
+          &__left{
+            margin: 0 10px 0 0;
+            width: 50%;
+            
+            label {
+                display: inline-block;
+                width: 100%;
+                padding: 3px 10px;
+                font-size: 0.85em;
+                text-align: center;
+                color: $button_link ;
+                border: solid 1px $button_link;
+                border-radius: 3px;
+                }
+              }
+
+          &__right{
+            margin: 0 0 ;
+            width: 95%;
+            
+
+              .info-text {
+                width: 100%;
+                padding: 3px 0px;
+                font-size: 0.9em;
+                font-weight: bold;
+                color: $button_link ;
+                
+                
+                }
+              }
+          }
+      
+     }
+
+     .comment_area{
+      margin: 35px auto 10px;
+      width: 100%;
+      text-align: center;
+
+        &-text{
+            font-size: 1.1em;
+            color: $button_link ;
+          }
+        
+        &__view{
+          width: 95%;
+          margin: 3px auto ;
+          border-top: solid 1px $button_link ;
+          border-bottom: solid 1px $button_link ;        
+
+            &-text{
+              margin-top: -20px;
+              padding: 7px 15px;
+              font-size: 0.85em;
+              color: $button_link;
+              line-height: 1.7;
+              text-align: left;
+              white-space: pre-line;
+            }
+
+          }
+
+      
+       }
+
+}

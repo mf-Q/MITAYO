@@ -16,19 +16,9 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th>ローグ・ワン</th>
-                <td data-label="内容" class="txt">2017年01月4日</td>
-            </tr>
-            <tr>
-                <th>Stand by me</th>
-                <td data-label="内容" class="txt">1990年12月15日</td>
-            </tr>
-            <tr>
-                <th>ファンタスティック・ビースト</th>
-                <td data-label="内容" class="txt">2016年11月24日</td>
-            </tr>
-          <tr>
+            <% @products.each do |product| %>
+             <%= render partial: "product", locals: { product: product } %>
+            <% end %>
         </tbody>
     </table>   
 

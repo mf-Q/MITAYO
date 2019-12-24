@@ -12,6 +12,7 @@
 
   <body>
   <header>
+    <%= render 'layouts/notifications' %>
     <h1 class="header__title"><a href="/">MITAYO</a></h1>
     
     <% if user_signed_in? %>
@@ -27,6 +28,7 @@
         </div>
       <% end %>
   </header>
+    
     <%= yield %>
   </body>
 </html>
