@@ -2,6 +2,11 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all.order("id")
+    @product = @products.each do |product|
+    @product_user_id = product.user_id
+    end
+    @q = Product.ransack(params[:q])
+    @search = @q.result(distinct: true)
   end
 
   def new
@@ -37,13 +42,13 @@ class ProductsController < ApplicationController
   def update
     @product = Product.find(params[:id])
     @product.update(product_params)
-    redirect_to action: 'show'
+    redirect_to product_path, notice: '1 MITAYO 編集！'
   end
 
   def destroy
     @product = Product.find(params[:id])
     @product.destroy
-    redirect_to action: 'index'
+    redirect_to root_path, alert: '1 MITAYO 削除！'
   end
 
   private

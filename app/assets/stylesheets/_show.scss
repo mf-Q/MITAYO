@@ -92,8 +92,19 @@
       margin: 30px auto;
       display: flex;
 
-      .edit_btn{
+      .half_btn{
         width: 50%;
+        margin: auto 10px;
+        background-color: $main_color;
+        padding: 7px;
+        text-align: center;
+        color: #fff;
+        letter-spacing: 10px;
+        border-radius: 3px;
+      }
+
+      .large_btn{
+        width: 100%;
         margin: auto 10px;
         background-color: $main_color;
         padding: 7px;
