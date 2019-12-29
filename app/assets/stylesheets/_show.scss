@@ -2,7 +2,7 @@
   margin:50px auto;
   width: 30em;
   height: auto;
-  
+
 
     h2{
       background-color: $main_color;
@@ -86,8 +86,30 @@
             }
 
           }
-
-      
        }
+    .btn__box{
+      width: 100%;
+      margin: 30px auto;
+      display: flex;
 
+      .edit_btn{
+        width: 50%;
+        margin: auto 10px;
+        background-color: $main_color;
+        padding: 7px;
+        text-align: center;
+        color: #fff;
+        letter-spacing: 10px;
+        border-radius: 3px;
+      }
+
+      a:hover{
+        background-color: $button_link;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all  0.5s ease;
+      }
+
+    }
 }
