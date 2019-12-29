@@ -37,11 +37,12 @@
                 <%= render partial: "product", locals: { product: product } %>
                 <% end %> 
             <% end %>
-
         <% end %>
         </tbody>
     </table>   
-
+    <div class="kaminari_box">
+    <%= paginate @products %>
+    </div>
   </section>
 </div>
 </body>

@@ -1,12 +1,12 @@
 class ProductsController < ApplicationController
 
   def index
-    @products = Product.all.order("id")
+    @products = Product.page(params[:page]).per(8).order("id")
     @product = @products.each do |product|
     @product_user_id = product.user_id
     end
     @q = Product.ransack(params[:q])
-    @search = @q.result(distinct: true)
+    @search = @q.result(distinct: true).page(params[:page]).per(8).order("id")
   end
 
   def new
