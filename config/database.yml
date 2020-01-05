@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: MITAYO_production
-  username: MITAYO
-  password: <%= ENV['MITAYO_DATABASE_PASSWORD'] %>
+  database: <%= ENV['DB_NAME'] %>
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
